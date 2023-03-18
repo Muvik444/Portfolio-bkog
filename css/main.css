@@ -1,0 +1,163 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  --index: calc(1vw + 1vh);
+  --color-header: #f4efec;
+  --color-text: #cdc6c3;
+  --gallery-gap: calc(var(--index) * 7.5);
+}
+@font-face {
+  font-family: raleway-c;
+  src: url(../fonts/raleway-regular.woff2);
+}
+@font-face {
+  font-family: outfit-c;
+  src: url(../fonts/outfit-regular.woff2);
+}
+li {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+  color: #fafafa;
+  transition: 0.7s ease-out;
+}
+
+a:hover {
+  color: rgb(0, 63, 100);
+  transition: 0.3s;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: outfit-c;
+}
+
+.content,
+.hero,
+.main-header,
+.gallery > * {
+  will-change: transform;
+}
+body {
+  background-image: url(../img/bg.jpg);
+  background-size: 50px;
+  color: #fafafa;
+  font-family: raleway-c;
+  overflow-x: hidden;
+}
+
+.logo {
+  font-family: raleway-c;
+  font-size: 50px;
+}
+
+.navbar {
+  padding: 20px 0;
+  z-index: 1000;
+  position: relative;
+  font-size: 30px;
+}
+.nav-item {
+  display: flex;
+  justify-content: space-around;
+  z-index: 1000;
+  position: relative;
+  color: #fafafa;
+}
+
+.navbar .nav-item ul {
+  display: flex;
+  column-gap: 80px;
+  z-index: 1000;
+  position: relative;
+  font-size: 20px;
+  padding: 20px;
+}
+
+.navbar .nav-item .Contact {
+  width: 10%;
+  height: 30px;
+  position: relative;
+  top: 18px;
+  left: 20px;
+  background: #fff;
+  color: #000;
+  transition: 0.5s;
+  border: none;
+  outline: none;
+  border-radius: 20px;
+}
+.navbar .nav-item .Contact:hover {
+  background: yellow;
+  transition: 0.5s;
+  box-shadow: 1px 2px 30px 6px yellow;
+}
+
+.navbar .nav-item .Contact a {
+  color: #000;
+}
+
+.hero {
+  width: calc(var(--index) * 36);
+  position: absolute;
+  left: 37vw;
+  top: 22vh;
+  z-index: -1;
+}
+.main-header {
+  height: 100vh;
+}
+.container {
+  padding: 0 7vw;
+}
+.main-title {
+  font-size: calc(var(--index) * 8);
+  position: absolute;
+  width: min-content;
+  bottom: 12vh;
+  line-height: 0.9;
+}
+.gallery {
+  display: flex;
+  padding: calc(var(--index) * 8) 0;
+}
+.gallery > * {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.gallery__item {
+  max-width: calc(var(--index) * 21);
+  margin-bottom: var(--gallery-gap);
+  max-height: 180vh;
+  border-radius: 8px;
+}
+.gallery__left {
+  margin-top: calc(var(--gallery-gap) * 1.75);
+}
+.gallery__right .gallery__item {
+  margin: 0;
+  margin-top: var(--gallery-gap);
+}
+.text-block {
+  color: var(--color-text);
+  position: relative;
+}
+.text-block__h {
+  font-size: 2rem;
+  line-height: 2.4rem;
+  color: var(--color-header);
+  margin-bottom: 1.5rem;
+}
+.text-block__p {
+  line-height: 1.75;
+}

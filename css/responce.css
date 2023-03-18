@@ -1,0 +1,44 @@
+@media screen and (max-width: 390px) {
+  .navbar .nav-item ul {
+    display: none;
+  }
+  .hero {
+    width: calc(var(--index) * 36);
+    position: absolute;
+    left: -60px;
+    top: 12vh;
+    z-index: -1;
+  }
+  .main-header {
+    height: 90vh;
+    font-size: 15px;
+  }
+
+  .main-header .main-title {
+    font-size: 80px;
+  }
+  .js-hover,
+  .Contact {
+    display: none;
+  }
+
+  .logo {
+    content: "Tim - Dev";
+    font-size: 44px;
+    font-family: raleway-c;
+  }
+  .gallery {
+    display: grid;
+  }
+}
+
+@media screen and (min-width: 413px) and (max-width: 820px) {
+  .hero {
+    left: 10px;
+    top: 12vh;
+    z-index: -1;
+  }
+  .gallery {
+    display: grid;
+  }
+}
